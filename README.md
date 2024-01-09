@@ -4,7 +4,7 @@
 
 This implementation brings a variation on how to expose a REST API. Instead of using the Camel REST DSL, 
 it uses the spring's @RestController annotation. This way, the REST API is implemented as a regular Spring
-Controller, and the Camel route is implemented as a regular Spring Service.
+Controller, and the Camel route call is wrapped in a regular Spring Service.
 
 ```java
 @RestController
