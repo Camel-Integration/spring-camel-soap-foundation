@@ -54,18 +54,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.camel.springboot</groupId>
-            <artifactId>camel-netty-http-starter</artifactId>
-            <version>${camel.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.camel</groupId>
-            <artifactId>camel-jackson</artifactId>
-            <version>${camel.version}</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
