@@ -2,6 +2,7 @@ package org.integration.camelfoundation.controller;
 
 import com.dataaccess.webservicesserver.NumberToDollarsResponse;
 import com.dataaccess.webservicesserver.NumberToWordsResponse;
+import jakarta.validation.Valid;
 import org.integration.camelfoundation.model.NumberDto;
 import org.integration.camelfoundation.service.NumberConversionService;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,12 +22,12 @@ public class NumberConversionController {
 
 
     @PostMapping("/convertNumberToWords")
-    public NumberToWordsResponse convertNumberToWords (@RequestBody NumberDto numberDto) {
+    public NumberToWordsResponse convertNumberToWords (@Valid @RequestBody NumberDto numberDto) {
         return numberConversionService.getNumberToWords(numberDto);
     }
 
     @PostMapping("/convertNumberToDollars")
-    public NumberToDollarsResponse convertNumberToDollars (@RequestBody NumberDto numberDto) {
+    public NumberToDollarsResponse convertNumberToDollars (@Valid @RequestBody NumberDto numberDto) {
         return numberConversionService.getNumberToDollars(numberDto);
     }
 }
